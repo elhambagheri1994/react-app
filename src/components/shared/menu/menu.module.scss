@@ -1,0 +1,30 @@
+@import "../../../assets/style/colors.scss";
+.menuBox {
+  text-align: center;
+  & > img {
+    width: 135px;
+    margin-top: 30px;
+    height: 50px;
+  }
+  .company {
+    background: $primary_color;
+    max-width: 180px;
+    color: white;
+    margin: 15px auto;
+    font-size: 0.8rem;
+    padding: 7px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  .user {
+    color: $text_gray;
+    font-size: 0.8rem;
+  }
+  a {
+    text-decoration: none;
+    color: $input_text;
+  }
+}
+.navLinkRoot {
+  text-align: right;
+}

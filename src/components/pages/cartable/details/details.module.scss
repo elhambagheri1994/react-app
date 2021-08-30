@@ -1,0 +1,136 @@
+@import "../../../../assets/style/colors.scss";
+
+.details {
+  margin: 49px auto 0 auto;
+  padding: 20px 5%;
+  max-width: 500px;
+  width: 90%;
+
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    border-right: 3px solid $activeColor;
+
+    & > span {
+      & > span {
+        color: $dark_gray;
+      }
+      .title {
+        margin-left: 5px;
+        color: $text_gray;
+      }
+    }
+
+    .status {
+      border-radius: 20px;
+      background-color: $light_blue;
+      color: white;
+      padding: 2px 15px;
+      font-size: 0.7rem;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    & > div {
+      display: flex;
+      font-size: 0.9rem;
+
+      .titles {
+        display: flex;
+        width: 110px;
+        min-width: 110px;
+        margin-left: 25px;
+        color: $text_gray;
+      }
+      .data {
+        display: flex;
+        color: $dark_gray;
+      }
+    }
+  }
+}
+.signButtons {
+  display: flex;
+  padding: 0 5% 20px 5%;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 90%;
+  min-height: 70px;
+  box-sizing: border-box;
+  & > button {
+    width: 48%;
+  }
+  .danger {
+    background-color: $danger !important;
+  }
+}
+.shapes {
+  display: flex;
+  margin: 30px auto 0 auto;
+  justify-content: right;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 10px;
+  max-width: 500px;
+  width: 85%;
+  min-height: 100px;
+
+  & > div {
+    & > span {
+      display: block;
+      font-size: 0.7rem;
+      text-align: center;
+    }
+  }
+}
+.accordin {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.accordinDetail {
+  min-height: 70px;
+  background-color: white;
+  width: 100%;
+  border-radius: 3px;
+  border-right: 4px solid $primary_color;
+  box-shadow: 0px 1px 5px 2px $input_border;
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    border-right: 3px solid $activeColor;
+    color: $dark_gray;
+    margin-bottom: 5px;
+    & > div {
+      color: $dark_gray;
+    }
+    & > span {
+      & > span {
+        color: $dark_gray;
+      }
+      .title {
+        margin-left: 5px;
+        color: $text_gray;
+      }
+    }
+    .status {
+      border-radius: 20px;
+      background-color: $light_blue;
+      color: white;
+      padding: 2px 15px;
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../../assets/style/colors.scss";
+
+.about {
+  text-align: center;
+  padding-top: 45px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: $backColor;
+
+  .content {
+    & > img {
+      width: 150px;
+      margin-top: 35px;
+      height: 60px;
+    }
+    & > p {
+      width: 80%;
+      margin: 30px auto;
+      text-align: right;
+      font-size: 0.8rem;
+      max-width: 500px;
+      color: $input_text;
+      border-right: 3px solid $activeColor;
+      padding-right: 10px;
+      .name {
+        color: $primary_color;
+      }
+    }
+    .details {
+      font-size: 0.8rem;
+      color: $input_text;
+      :first-child {
+        color: $text_gray;
+      }
+    }
+    a:first-of-type {
+      margin-top: 50px;
+    }
+    & > a {
+      text-decoration: none;
+      color: white;
+      background-color: $success_button;
+      display: block;
+      border-radius: 20px;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 8px 0;
+      font-size: 0.8rem;
+      width: 80%;
+    }
+  }
+
+  .logo {
+    display: flex;
+    width: 60%;
+    max-width: 500px;
+    justify-content: space-around;
+    margin: 30px auto;
+    & > img {
+      height: 60px;
+    }
+    & > span {
+      height: 70px;
+      width: 2px;
+      background-color: $activeColor;
+    }
+  }
+}

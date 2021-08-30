@@ -1,0 +1,53 @@
+image: localhost:5000/pwa-master
+
+stages:
+  - build
+  - build-image
+  - deploy-to-docker
+
+build:
+  stage: build
+  tags:
+    - shell
+  script:
+    - rimraf package-lock.json
+    - rimraf yarn.lock
+    - yarn
+    - CI= npm run build
+  artifacts:
+    paths:
+      - build
+      - docker-compose.yml
+      - Dockerfile
+build-image:
+  stage: build-image
+  script:
+    - sudo docker stop localhost:pwa-mahya-pg || true
+    - sudo docker rm -f localhost:pwa-mahya-pg || true
+    - sudo docker rmi localhost:5000/pwa-mahya-pg:latest || true
+    - sudo docker build --pull -t localhost:5000/pwa-mahya-pg .
+    - sudo docker push localhost:5000/pwa-mahya-pg
+  artifacts:
+    paths:
+      - build
+      - docker-compose.yml
+      - Dockerfile
+
+  only:
+    - develop
+  tags:
+    - shell
+deploy-to-docker:
+  stage: deploy-to-docker
+  script:
+    - sudo docker stop localhost:pwa-mahya-pg || true
+    - sudo docker-compose -f docker-compose.yml up -d || true
+  artifacts:
+    paths:
+      - build
+      - docker-compose.yml
+      - Dockerfile
+  only:
+    - develop
+  tags:
+    - shell

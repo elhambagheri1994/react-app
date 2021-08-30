@@ -1,0 +1,90 @@
+@import "../../../assets/style/colors.scss";
+
+.deposits {
+  margin-top: 60px;
+  .depositItem {
+    min-height: 150px;
+    background-color: white;
+    width: 95%;
+    border-radius: 3px;
+    border-right: 4px solid $primary_color;
+    box-shadow: 0px 1px 5px 2px $input_border;
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: $dark_gray;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    .depositNumber {
+      border-radius: 20px;
+      background-color: $primary_color;
+      color: white;
+      padding: 0 20px;
+      box-sizing: border-box;
+      height: 25px;
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+    }
+    .depositType {
+      border-right: 3px solid $activeColor;
+      padding-right: 10px;
+      font-size: 0.7rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    margin-top: 15px;
+    .titles {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+      color: $text_gray;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      color: $dark_gray;
+    }
+  }
+  .amounts {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .gray {
+        color: $text_gray;
+        font-size: 0.7rem;
+      }
+      .line {
+        width: 65px;
+        height: 2px;
+        background-color: $activeColor;
+      }
+    }
+  }
+}
+.depositNumberSkeleton {
+  border-radius: 20px;
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: 25px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.depositTypeSkeleton {
+  padding-right: 10px;
+  font-size: 0.7rem;
+}

@@ -1,0 +1,11 @@
+version: '2'
+services:
+  PWA-MAHYA-PG:
+    image: localhost:5000/pwa-mahya-pg:latest
+    environment:
+      - APP_SLEEP=20
+    container_name: pwa-mahya-pg
+
+    ports:
+      - 8267:80
+    restart: always

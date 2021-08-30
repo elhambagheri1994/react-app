@@ -1,0 +1,26 @@
+@import "../../../assets/style/colors.scss";
+
+.mainroot {
+  width: 100%;
+  margin: 0;
+  box-shadow: none;
+  background: #edeff1;
+}
+.sumeryroot {
+  background: #d8dbde;
+  box-shadow: none;
+  color: $dark_gray;
+  margin: auto;
+  height: 45px;
+  min-height: 45px !important;
+  font-size: 0.9rem;
+  border-radius: 5px 5px 0 0;
+}
+.detailroot {
+  display: block;
+  background: $backColor;
+  box-shadow: 0 -5px 8px -3px #d8dbde inset;
+}
+.expanded {
+  margin: 0 !important;
+}

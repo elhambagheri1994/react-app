@@ -1,0 +1,134 @@
+@import "../../../assets/style/colors.scss";
+
+.header {
+  height: 300px;
+  display: flex;
+  padding-top: 45px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: $primary_color;
+  box-shadow: 0 8px 20px 2px $shadow;
+  & > div {
+    width: 90%;
+    max-width: 500px;
+    min-width: 280px;
+    margin: 0px auto;
+    height: 120px;
+    background: white;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > span {
+      font-size: 40px;
+      background: #00b8d4;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 11px;
+      color: white;
+    }
+    .greenIcon {
+      background: #4cb050;
+    }
+    & > div {
+      width: 71%;
+      text-align: center;
+      .title {
+        color: $primary_color;
+        margin-bottom: 15px;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+      .info {
+        display: flex;
+        justify-content: space-evenly;
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .gray {
+            color: $dark_gray;
+            font-size: 0.7rem;
+          }
+          .line {
+            width: 65px;
+            height: 2px;
+            background-color: $activeColor;
+          }
+        }
+      }
+    }
+  }
+}
+.list {
+  width: 90%;
+  margin: 30px auto 20px auto;
+  max-width: 500px;
+  min-width: 270px;
+  background-color: $backColor;
+
+  .listTitle {
+    color: $primary_color;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+
+    & > span {
+      font-size: 25px;
+      margin-left: 10px;
+      position: relative;
+      top: 4px;
+    }
+  }
+  & > section {
+    border-right: 4px solid #b39ddb;
+    padding-right: 15px;
+    & > div {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: right;
+      & > span {
+        font-size: 0.8rem;
+      }
+      .gray {
+        color: $dark_gray;
+        font-size: 0.8rem;
+        position: relative;
+        display: inline-block;
+        min-width: 170px;
+      }
+      .dottedLine {
+        border-top: 2px dotted $activeColor;
+        width: 20%;
+        min-width: 20px;
+        margin: 13px 10px 0 10px;
+      }
+    }
+  }
+  .yellwoBorder {
+    border-right: 4px solid #fac133;
+  }
+}
+.dashboardRoot {
+  margin: 0px auto;
+  border-radius: 70px;
+  background: #cbd9e4;
+  max-width: 500px;
+  min-width: 280px;
+}
+@media only screen and (max-width: 330px) {
+  .list {
+    & > section {
+      & > div {
+        .gray {
+          min-width: 0px !important;
+        }
+      }
+    }
+  }
+}

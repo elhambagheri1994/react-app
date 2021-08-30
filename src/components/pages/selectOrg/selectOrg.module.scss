@@ -1,0 +1,76 @@
+@import "../../../assets/style/colors.scss";
+
+.selectOrgContainer {
+  background: url(../../../assets/images/splashscreen_bg.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  text-align: center;
+  .logo {
+    padding: 10vh 0 0 0;
+    height: 70px;
+    margin-bottom: 5vh;
+  }
+  .orgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 10vh auto 2vh auto;
+    & > div {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 5px;
+      height: 150px;
+      width: 150px;
+      margin: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 0 10px 2px #5892af;
+      color: $primary_color;
+      padding: 20px 6px 8px 6px;
+      cursor: pointer;
+      & > img {
+        width: 50px;
+      }
+      & > span {
+        font-size: 0.8rem;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+      .orgLogo {
+        font-size: 40px;
+        color: $activeColor;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .selectOrgContainer {
+    background: url(../../../assets/images/splash_desktop.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .orgs {
+      & > div {
+        height: 200px;
+        width: 200px;
+        cursor: pointer;
+        & > span {
+          font-size: 1rem;
+          margin-top: 40px;
+        }
+        .orgLogo {
+          font-size: 50px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

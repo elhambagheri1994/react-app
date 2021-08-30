@@ -1,0 +1,50 @@
+@import "../../../assets/style/colors.scss";
+
+.header {
+  background-color: $primary_color;
+  height: 50px;
+  width: 100%;
+  color: white;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  .search {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reload {
+    font-size: 1.2rem;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & > span {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      font-size: 1.2rem;
+      transform: rotate(180deg);
+      cursor: pointer;
+      height: 45px;
+      width: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & > img {
+      width: 36px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../../../assets/style/colors.scss";
+.login_container {
+  .version {
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  background: url(../../../assets/images/login_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  .login_header {
+    width: 100%;
+    text-align: center;
+    min-height: 60px;
+    .header {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .inputs {
+    width: 30%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    margin-top: 12vh;
+    & > img {
+      width: 60%;
+      min-width: 150px;
+      margin-bottom: 50px;
+      height: 100px;
+    }
+  }
+  .hafizLogo {
+    margin: 20px auto;
+    width: 50px;
+  }
+}
+.login_input {
+  & > div {
+    width: 100%;
+    direction: rtl;
+    & > div {
+      color: $near_white !important;
+      &::before {
+        border-bottom: 1px solid $near_white !important;
+      }
+      &::after {
+        border-bottom: 1px solid $secondery_color !important;
+      }
+      &:hover {
+        &::before {
+          border-bottom: 2px solid $near_white !important;
+        }
+        &::after {
+          border-bottom: 2px solid $secondery_color !important;
+        }
+      }
+      & > input {
+        border-color: $near_white !important;
+        border-style: solid;
+        border-width: 0px 0px 1px 0;
+        color: $near_white !important;
+        text-align: left;
+        direction: ltr;
+        padding-right: 35px !important;
+
+        &::placeholder {
+          color: $near_white !important;
+          text-align: right;
+        }
+        &:focus {
+          border-bottom: 1px solid $secondery_color !important;
+        }
+        &:-webkit-autofill {
+          -webkit-text-fill-color: $near_white !important;
+          border-bottom: 1px solid $secondery_color !important;
+        }
+      }
+    }
+  }
+
+  & > span {
+    color: $secondery_color !important;
+  }
+}
+.label_root {
+  color: white !important;
+  right: 33px;
+  top: 6px;
+  left: unset !important;
+  font-size: 0.9rem;
+}
+@media only screen and (min-width: 1025px) {
+  .login_container {
+    background: url(../../../assets/images/login_desktop.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .login_header {
+      width: 100%;
+      text-align: center;
+      .logo {
+        width: 7% !important;
+      }
+      .header {
+        width: 50% !important;
+        max-width: 600px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .inputs {
+    width: 80% !important;
+  }
+}

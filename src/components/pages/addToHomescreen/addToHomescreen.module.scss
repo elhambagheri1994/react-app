@@ -1,0 +1,57 @@
+@import "../../../assets/style/colors.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-width: 240px;
+    & > img {
+      width: 100px;
+      margin-bottom: 30px;
+    }
+    & > p {
+      margin: 0;
+    }
+    & > ul {
+      padding: 0;
+      margin: 50px 0;
+      width: 100%;
+      max-width: 354px;
+      & > li {
+        list-style: none;
+        font-size: 0.7rem;
+        min-width: 240px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 30px;
+        & > i {
+          font-size: 0.8rem;
+          line-height: unset;
+        }
+      }
+    }
+    .title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .explanation {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}
+.buttonRoot {
+  max-width: 354px;
+  background-color: $primary_color !important ;
+  &:hover {
+    background-color: $primary_color !important ;
+  }
+}

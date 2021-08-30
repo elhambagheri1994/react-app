@@ -1,0 +1,70 @@
+@import "../../../assets/style/colors.scss";
+.list {
+  min-height: 150px;
+  background-color: white;
+  width: 95%;
+  border-radius: 3px;
+  border-right: 4px solid $primary_color;
+  box-shadow: 0px 1px 5px 2px $input_border;
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    border-right: 3px solid $activeColor;
+    .date {
+      font-size: 0.8rem;
+    }
+    & > span {
+      & > span {
+        color: $dark_gray;
+      }
+      .title {
+        margin-left: 5px;
+        color: $text_gray;
+        font-size: 0.9rem;
+      }
+    }
+    .status {
+      border-radius: 20px;
+      background-color: $light_blue;
+      color: white;
+      padding: 2px 15px;
+      font-size: 0.7rem;
+      text-align: center;
+      max-width: 170px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    & > div {
+      display: flex;
+      font-size: 0.7rem;
+
+      .titles {
+        display: flex;
+        width: 75px;
+        min-width: 75px;
+        margin-left: 25px;
+        color: $text_gray;
+      }
+      .data {
+        display: flex;
+        color: $dark_gray;
+      }
+    }
+  }
+}
+.detailList {
+  margin-top: 60px;
+}

@@ -1,0 +1,17 @@
+@import "../../../assets/style/colors.scss";
+.modal_paper {
+  margin: 16px !important;
+  font-size: 0.9rem;
+}
+.title_root {
+  background-color: $header;
+  color: $primary_color;
+  margin-bottom: 20px;
+  & > h2 {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+.action_root {
+  padding: 24px;
+}

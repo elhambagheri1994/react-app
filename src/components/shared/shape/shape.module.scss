@@ -1,0 +1,41 @@
+@import "../../../assets/style/colors.scss";
+
+.pointer {
+  padding-left: 20px;
+  min-width: 100px;
+  height: 40px;
+  margin: 0 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  color: white;
+  margin-bottom: 15px;
+  transform: rotate(180deg);
+  & > span {
+    transform: rotate(180deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid $backColor;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+}

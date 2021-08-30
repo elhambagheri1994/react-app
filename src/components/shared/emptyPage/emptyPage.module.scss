@@ -1,0 +1,23 @@
+@import "../../../assets/style/colors.scss";
+
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #7196b5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50vh;
+  & > span {
+    font-size: 150px;
+    &:before {
+      color: #b4cce0;
+    }
+  }
+  & > div {
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+}
